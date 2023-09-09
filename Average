@@ -1,0 +1,15 @@
+Python 3.11.5 (tags/v3.11.5:cce6ba9, Aug 24 2023, 14:38:34) [MSC v.1936 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license()" for more information.
+>>> def algorithm():
+...     print("Step 1: take input from the user for both variable a and b.")
+...     print("Step 2: add both variables together.")
+...     print("Step 3: divide the new number by 2.")
+...     print("Step 4: display the average of the variables to the user.")
+... 
+...     
+>>> def average():
+...     v1= eval(input("Enter variable 1"))
+...     v2= eval(input("Enter variable 2"))
+...     print((v1+v2)/2)
+... 
+...     
