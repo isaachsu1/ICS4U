@@ -1,0 +1,16 @@
+>>> def EoO():
+...     x=eval(input("Enter the Number: "))
+...     if x % 2==0:
+...         print("Even Number")
+...     else:
+...         print("Odd Number")
+... 
+...         
+>>> EoO()
+Enter the Number: 1
+Odd Number
+>>> EoO
+<function EoO at 0x00000234BC0A45E0>
+>>> EoO()
+Enter the Number: 1234123412521235
+Odd Number
