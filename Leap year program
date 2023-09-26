@@ -2,6 +2,7 @@
 def ly():
  #receive input from user
  year=int(input("Enter a year"))
+ #determine if year is valid
  if year > 0:
  #determine if the year is a centurial
   if year % 100 == 0:
@@ -16,6 +17,7 @@ def ly():
      print(year, " is a leap year")
    else:
      print(year, " is not a leap year")
+ #if year is invalid
  else:
    print("invalid year")
 
