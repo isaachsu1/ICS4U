@@ -1,0 +1,22 @@
+print("hello" , "how are you" ,sep = "---")
+hello---how are you
+for i in 'python':
+    print(i)
+
+    
+p
+y
+t
+h
+o
+n
+print("Python" , end = '@')
+Python@
+print("programming")
+programming
+print("Red" , "Green", "Blue")
+Red Green Blue
+print("Red" , "Green", "Blue", sep',')
+SyntaxError: invalid syntax
+print("Red" , "Green", "Blue", sep=',')
+Red,Green,Blue
