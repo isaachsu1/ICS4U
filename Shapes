@@ -1,0 +1,36 @@
+#Import Math
+import math
+#Define Function
+def Shapes():
+#Area of a circle
+  #Receive input from the user
+  r = float(input("Enter the radius of the circle(cm): "))
+  #Calculate area of the circle
+  A1 = math.pi * (r**2)
+  #Return area of the circle
+  print("The area of the circle is ", A1, "cm")
+#Area of a cube
+  #Receive input from the user
+  e = float(input("Enter the edge of the cube(cm): "))
+  #Calculate the area of the cube
+  A2 = 6*(r**2)
+ #Return area of the cube
+  print("The area of the cube is ", A2, "cm")
+#Area of a cylinder
+  #Receive input from the user
+  r2 = float(input("Enter the radius of the cylinder(cm): "))
+  h = float(input("Enter the height of the cylinder(cm): "))
+  #Calculate the area of the cylinder
+  A3 = 2 * math.pi * r2 * h + 2 * math.pi * r2**2
+  #Return area of the cylinder
+  print("The area of the cylinder is ", A3, "cm")
+#Area of a sphere
+  #Receive input from the user
+  r3 = float(input("Enter the radius of the sphere(cm): "))
+  #Calculate the area of the sphere
+  A4 = 4 * math.pi * (r2**2)
+  #Return area of the sphere
+  print("The area of the sphere is ", A4, "cm")
+
+
+Shapes()  
