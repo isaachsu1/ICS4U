@@ -1,0 +1,12 @@
+#Celsius to Fahrenheit Program
+#Define the function
+def CtF():
+  #Take input from the user
+  c = float(input("Enter the temperature(Celsius): "))
+  #Calculate the temperature
+  temperature = (9/5)*c + 32
+  #Give temperature to user
+  print("The temperature is ", temperature, " degrees Fahrenheit")
+
+
+CtF()
