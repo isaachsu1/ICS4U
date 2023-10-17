@@ -1,0 +1,17 @@
+#Deliv-e-droid
+def DED():
+  #get input from user
+  P= int(input("Enter number of packages delivered:"))
+  C= int(input("Enter number of collisions:"))
+  #Calculate points
+  #500 point bonus
+  if P>C:
+    total=500+(P*50)-(C*10)
+    print("Total Score:", total)
+  #no bonus
+  else:
+    total=(P*50)-(C*10)
+    print("Total Score:", total)
+
+
+DED()
