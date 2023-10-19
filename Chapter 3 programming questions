@@ -1,0 +1,253 @@
+#1. Write a program to calculate the volume and surface area of a sphere from
+#its radius, given as input. Here are some formulas that might be useful:
+#V = (4/3)3pir^3
+#A = 4pir^2
+import math
+def VnS():
+  r= int(input("Enter radius:"))
+  volume = (4/3)*3*math.pi*(r**3)
+  Surface_Area = 4*math.pi*(r**2)
+  print("The volume is", volume)
+  print("The surface area is", Surface_Area)
+
+VnS()
+
+#2. Write a program that calculates the cost per square inch of a circular pizza,
+#given its diameter and price. The formula for area is A = pir^2
+import math
+def pizza():
+  d = float(input("input diameter(inches): "))
+  p= float(input("Enter the price of the pizza: "))
+  r= d/2
+  total_area = math.pi*(r**2)
+  cost = total_area/p
+
+  print("area equals", total_area, "inches^2")
+  print("the pizza costs", cost, "per inche^2")
+
+
+pizza()
+
+#3. Write a program that computes the molecular weight of a carbohydrate (in
+#grams per mole) based on the number of hydrogen, carbon, and oxygen
+#atoms in the molecule. The program should prompt the user to enter the
+#number of hydrogen atoms, the number of carbon atoms, and the number
+#of oxygen atoms. The program then prints the total combined molecular
+#weight of all the atoms based on these individual atom weights:
+#Atom Weight
+#(grams I mole)
+#H 1.00794
+#c 12.0107
+#0 15.9994
+#For example, the molecular weight of water (H20) is: 2(1.00794) +
+#15.9994 = 18.01528.
+def CMW():
+    atom_weights = {'H': 1.00794, 'C': 12.0107, 'O': 15.9994}
+    H = 1.00794
+    C = 12.0107
+    O = 15.9994
+    hydrogen = int(input("Enter the number of hydrogen atoms: "))
+    carbon = int(input("Enter the number of carbon atoms: "))
+    oxygen = int(input("Enter the number of oxygen atoms: "))
+    total_weight = (hydrogen * H) + (carbon * C) +(oxygen * O)
+    print("Total weight is ", total_weight, "grams per mole")
+
+
+CMW()
+
+#4. Write a program that determines the distance to a lightning strike based on
+#the time elapsed between the flash and the sound of thunder. The speed
+#of sound is approximately 1100 ft/ sec and 1 mile is 5280 ft.
+def Lightning_distance():
+  s=float(input("Enter the time between the strike and the thunder: "))
+  distance = 1100*s
+  miles = distance/5280
+  print("the lightning strike was", miles, "miles away")
+
+
+Lightning_distance()
+
+#5. The Konditorei coffee shop sells coffee at $10.50 a pound plus the cost
+#of shipping. Each order ships for $0.86 per pound + $1.50 fixed cost for
+#overhead. Write a program that calculates the cost of an order.
+def coffee():
+  p = float(input("Enter pounds bought: "))
+  total = p*0.86 + 1.50
+  print("Total cost of shipping is $", total)
+
+
+coffee()
+
+#6. Two points in a plane are specified using the coordinates (x1,y1) and
+#(x2,y2). Write a program that calculates the slope of a line through two
+#(non-vertical) points entered by the user.
+#y2 - y1 slope=
+#x 2 1
+def cs():
+  x1 = int(input("Enter x1: "))
+  y1 = int(input("Enter y1: "))
+  x2 = int(input("Enter x2: "))
+  y2 = int(input("Enter y2: "))
+  slope = (y2 - y1)/(x2 - x1)
+  if x2 - x1 == 0:
+    print("The line is vertical. The slope is undefined.")
+  else:
+    print("The slope of the line through (", x1 , ",", y1, ") and (",x2,",",y2,") is: {",slope,"}")
+
+
+cs()
+
+#7. Write a program that accepts two points (see previous problem) and determines the distance between them.
+#distance= sqrt(x2- x1)^2 + (y2- y1)^2
+import math
+def dist():
+  x1 = int(input("Enter x1: "))
+  y1 = int(input("Enter y1: "))
+  x2 = int(input("Enter x2: "))
+  y2 = int(input("Enter y2: "))
+  distance = math.sqrt(((x2-x1)**2) + ((y2-y1)**2))
+  print("The distance between the two points is", distance)
+
+
+dist()
+
+#8. The Gregorian epact is the number of days between January 1st and the
+#previous new moon. This value is used to figure out the date of Easter. It
+#is calculated by these formulas (using int arithmetic):
+#C = year/ /100
+#epact = (8 + (C/ /4)- C + ((80 + 13)/ /25) + 11(year%19))%30
+#Write a python program that prompts the user for a 4-digit year and then outputs
+#the value of the epact.
+def ce():
+    year = float(input("Enter a 4-digit year: "))
+    C = year // 100
+    epact = (8 + (C // 4) - C + ((80 + 13) // 25) + 11*(year % 19)) % 30
+    if 1000 <= year <= 9999:
+      print("The epact for the year ", year,"is:",epact)
+
+    else:
+      print("Invalid input. Please enter a 4-digit year.")
+
+ce()
+
+#9. Write a program to calculate the area of a triangle given the length of its
+#three sides-a, b, and c-using these formulas:
+#S= (a+b+c)/2
+#A= sqrt(s(s- a)(s- b)(s- c))
+import math
+def cta():
+  a = float(input("Enter the length of side a: "))
+  b = float(input("Enter the length of side b: "))
+  c = float(input("Enter the length of side c: "))
+  s = (a + b + c) / 2
+  area = math.sqrt(s * (s - a) * (s - b) * (s - c))
+  if area > 0:
+    print("The area of the triangle is:", area)
+  else:
+    print("The sides do not form a valid triangle.")
+
+
+cta()
+
+#10. Write a program to determine the length of a ladder required to reach a
+#given height when leaned against a house. The height and angle of the
+#ladder are given as inputs. To compute length use:
+# length = height/ sin angle
+#Note: The angle must be in radians. Prompt for an angle in degrees and
+#use this formula to convert:
+#radians = pi / 180 degrees
+import math
+def length():
+  h = float(input("Enter the height: "))
+  a = float(input("Enter the angle(degrees): "))
+  radians = math.pi / 180
+  length = h / (math.sin(radians))
+  print("The length of the ladder required is", length)
+
+
+length()
+
+#11. Write a program to find the sum of the first n natural numbers, where the
+#value of n is provided by the user.
+def a():
+  n = int(input("Enter a positive integer (n): "))
+  sum= 0
+  for i in range(1, n+1):
+      sum += i
+  print("The sum of the first", n," natural numbers is:", sum)
+
+
+a()
+
+#12. Write a program to find the sum of the cubes of the first n natural numbers
+#where the value of n is provided by the user.
+def a():
+  n = int(input("Enter a positive integer (n): "))
+  sum= 0
+  for i in range(1, n+1):
+      sum += i**3
+  print("The sum of the first", n," natural numbers is:", sum)
+
+
+a()
+
+#13. Write a program to sum a series of numbers entered by the user. The
+#program should first prompt the user for how many numbers are to be
+#summed. The program should then prompt the user for each of the numbers
+#in turn and print out a total sum after all the numbers have been
+#entered. Hint: Use an input statement in the body of the loop.
+# Get the number of terms to be summed from the user
+def a():
+  numterms = int(input("How many numbers do you want to add? "))
+  sum = 0
+  for _ in range(numterms):
+    num = float(input("Enter number: "))
+    sum += num
+  print("The total sum is: ", sum)
+
+
+a()
+
+#14. Write a program that finds the average of a series of numbers entered by
+#the user. As in the previous problem, the program will first ask the user
+#how many numbers there are. Note: The average should always be a float,
+#even if the user inputs are all ints.
+def a():
+  numterms = int(input("How many numbers do you want to average?:"))
+  total = 0
+  for _ in range(numterms):
+    num = float(input("Enter a number: "))
+    total += num
+
+
+  average = total / numterms
+  print("The average is: ", average)
+
+
+a()
+
+#15. Write a program that approximates the value of pi by summing the terms
+#of this series: 4/1- 4/3 + 4/5- 4/7 + 4/9- 4/11 + ... The program should
+#prompt the user for n, the number of terms to sum, and then output the
+#sum of the first n terms of this series. Have your program subtract the
+#approximation from the value of math. pi to see how accurate it is.
+import math
+def a():
+  n = int(input("Enter the number of terms to sum: "))
+  app = 0
+  for i in range(n):
+    term = 4 / (2*i + 1)
+    if i % 2 == 0:
+        app += term
+    else:
+        app -= term
+
+  diff = abs(math.pi - app)
+
+  print("The approximation of pi is: ", app)
+  print("The difference from math.pi is: ", diff)
+
+
+a()
+
+#did not solve questions 16 and 17
