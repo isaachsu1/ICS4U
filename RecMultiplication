@@ -2,16 +2,16 @@
 def sec(a, b):
     #multiplication by 0
     if a == 0 or b == 0:
-        return 0
+      return 0
     #multiplication by 1
     if a == 1:
-        return b
+      return b
     if b == 1:
-        return a
+      return a
     #normal multiplication
     else:
-        #multiply a by (b - 1) and add a to the result
-        return a + sec(a, b - 1)
+      #multiply a by (b - 1) and add a to the result
+      return a + sec(a, b - 1)
 
 #Defining primary funciton
 def mainfunc():
