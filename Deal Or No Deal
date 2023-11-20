@@ -1,0 +1,53 @@
+#define calculate average function
+def calcav(n, total, sum):
+    #Enter dealer's offer
+    offer = int(input("Enter cash out deal: "))
+    #calculate the average
+    average = (sum-total)/(10-n)
+    #decide deal or no deal
+    if average > offer:
+      #Print average remaining case value and no deal
+      print("average remaining value is: ", average)
+      print("Therefore, no deal")
+    else:
+      #Print average remaining case value and deal
+      print("average remaining value is: ", average)
+      print("Therefore, deal")
+
+def DoND():
+  #define case values
+  cases = [100, 500, 1000, 5000, 10000, 25000, 50000, 100000, 500000, 1000000]
+  #sum of all the cases
+  sum = 1691600
+  #Get number of cases chose from the user
+  n = int(input("Enter the number of chosen cases: "))
+  #Define total
+  total = 0
+  #Get case numbers and add to total value
+  for i in range(n):
+    if i<=n:
+      a = int(input("Enter case number:"))
+    if a == 1:
+      total += cases[0]
+    if a == 2:
+      total += cases[1]
+    if a == 3:
+      total += cases[2]
+    if a == 4:
+      total += cases[3]
+    if a == 5:
+      total += cases[4]
+    if a == 6:
+      total += cases[5]
+    if a == 7:
+      total += cases[6]
+    if a == 8:
+      total += cases[7]
+    if a == 9:
+      total += cases[8]
+    if a == 10:
+      total += cases[9]
+  #Call calculate average function
+  calcav(n, total, sum)
+#Call game function
+DoND()
