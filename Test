@@ -1,0 +1,69 @@
+#1
+#import math
+import math
+
+#Define Function
+def quad():
+  #recieve a,b,c
+  b = eval(input("Enter B:"))
+  a = eval(input("Enter A:"))
+  c = eval(input("Enter C:"))
+  #calculate value to be sqaure rooted
+  sqroot = (b**2)-(4*a*c)
+  #if square rooted number less than zero
+  if sqroot < 0:
+    print("no roots(x-intercepts)")
+  else:
+    #find square root
+    squareRT = math.sqrt(sqroot)
+    #Calculate roots
+    root1 = ((-1*b)-squareRT)/(2*a)
+    root2 = ((-1*b)+squareRT)/(2*a)
+    #print roots
+    print("Roots are", root1, "and", root2)
+
+#call function
+quad()
+
+#2
+#Define function
+def sum():
+  #Get number of values
+  n = int(input("Enter number of numbers added together:"))
+  i = 0
+  total = 0
+  #if n = 0
+  if n == 0:
+    print(0)
+  #if i<=n
+  if i <= n:
+    #Calculate total sum
+    while i < n:
+      value = int(input("Enter number: "))
+      total = total + value
+      i = i + 1
+      #Print sum
+    print(total)
+
+#Call function
+sum()
+
+3#
+def fact():
+  #Get number
+  n = int(input("Enter number to find factorial:"))
+  i = 0
+  total = 0
+  #if n = 0
+  if n == 0:
+    print(0)
+  else:
+    #Calculate factorial
+    while i <= n:
+      total += i*(i+1)
+      i += 1
+    #Print factorial
+    print(total)
+
+#Call function
+fact()  
