@@ -1,0 +1,20 @@
+#1: Leap year program
+#Define function
+def ly():
+  #Get year from user
+  year = int(input("Enter the year: "))
+  #if year is a century year
+  if year %100 ==0:
+    #is century year a leap year
+    if year%400 ==0:
+      print(year,"is a leap year.")
+    else:
+      print(year,"is not a leap year.")
+  #if year is not a century year
+  else:
+    if year%4 == 0:
+      print(year,"is a leap year.")
+    else:
+      print(year,"is not a leap year.")
+#Call function
+ly()
