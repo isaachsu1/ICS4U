@@ -1,0 +1,22 @@
+#3: speed limit program
+#Define function
+def speedlimit():
+  #Get input from user
+  speed = int(input("Enter the speed tracked: "))
+  limit = int(input("Enter the speed limit: "))
+  #if speed is over the limit
+  if speed > limit:
+    #if speed is over 90 mph
+    if speed > 90:
+      fine = 250 + ((speed - limit)*5)
+      print("The fine will be: $", fine,"for a speed of", speed,"mph in a", limit,"mph zone")
+    #if speed is under 90 mph
+    else:
+      fine = 50 + ((speed - limit)*5)
+      print("The fine will be: $", fine,"for a speed of", speed,"mph in a", limit,"mph zone")
+  #if speed was not illegal
+  else:
+    print("Speed not illegal.")
+
+#call function
+speedlimit()
